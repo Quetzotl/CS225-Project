@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/hello.dir/hello.c.o -o hello.app/Contents/MacOS/hello  -Wl,-rpath,/Users/josh/Downloads/CS225-Project/build libSDL3.0.dylib

@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/josh/Downloads/CS225-Project/build/cmake_install.cmake",
+		"/Users/josh/Downloads/CS225-Project/build/vendored/SDL/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
