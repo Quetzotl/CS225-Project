@@ -118,17 +118,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named hello
+# Target rules for targets named minesweeper
 
 # Build rule for target.
-hello: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello
-.PHONY : hello
+minesweeper: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 minesweeper
+.PHONY : minesweeper
 
 # fast build rule for target.
-hello/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
-.PHONY : hello/fast
+minesweeper/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/build
+.PHONY : minesweeper/fast
 
 #=============================================================================
 # Target rules for targets named SDL3-shared
@@ -169,29 +169,29 @@ SDL_uclibc/fast:
 	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL_uclibc.dir/build.make vendored/SDL/CMakeFiles/SDL_uclibc.dir/build
 .PHONY : SDL_uclibc/fast
 
-hello.o: hello.c.o
-.PHONY : hello.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-hello.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/hello.c.o
-.PHONY : hello.c.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-hello.i: hello.c.i
-.PHONY : hello.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-hello.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/hello.c.i
-.PHONY : hello.c.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-hello.s: hello.c.s
-.PHONY : hello.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-hello.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/hello.c.s
-.PHONY : hello.c.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -204,10 +204,10 @@ help:
 	@echo "... SDL3-shared"
 	@echo "... SDL3_test"
 	@echo "... SDL_uclibc"
-	@echo "... hello"
-	@echo "... hello.o"
-	@echo "... hello.i"
-	@echo "... hello.s"
+	@echo "... minesweeper"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

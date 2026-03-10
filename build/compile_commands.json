@@ -1,9 +1,9 @@
 [
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build",
-  "command": "/usr/bin/clang  -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -o CMakeFiles/hello.dir/hello.c.o -c /Users/josh/Downloads/CS225-Project/hello.c",
-  "file": "/Users/josh/Downloads/CS225-Project/hello.c",
-  "output": "CMakeFiles/hello.dir/hello.c.o"
+  "command": "/usr/bin/clang++  -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -o CMakeFiles/minesweeper.dir/main.cpp.o -c /Users/josh/Downloads/CS225-Project/main.cpp",
+  "file": "/Users/josh/Downloads/CS225-Project/main.cpp",
+  "output": "CMakeFiles/minesweeper.dir/main.cpp.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",

@@ -1,4 +1,4 @@
-/Users/josh/Downloads/CS225-Project/build/CMakeFiles/hello.dir
+/Users/josh/Downloads/CS225-Project/build/CMakeFiles/minesweeper.dir
 /Users/josh/Downloads/CS225-Project/build/CMakeFiles/edit_cache.dir
 /Users/josh/Downloads/CS225-Project/build/CMakeFiles/rebuild_cache.dir
 /Users/josh/Downloads/CS225-Project/build/vendored/SDL/CMakeFiles/SDL3-shared.dir

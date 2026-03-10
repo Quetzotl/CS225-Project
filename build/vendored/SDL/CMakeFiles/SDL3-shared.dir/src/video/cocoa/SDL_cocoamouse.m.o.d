@@ -1,7 +1,7 @@
 vendored/SDL/CMakeFiles/SDL3-shared.dir/src/video/cocoa/SDL_cocoamouse.m.o: \
   /Users/josh/Downloads/CS225-Project/vendored/SDL/src/video/cocoa/SDL_cocoamouse.m \
   /Users/josh/Downloads/CS225-Project/vendored/SDL/src/SDL_internal.h \
-  /Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-config-/build_config/SDL_build_config.h \
+  /Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-config-debug/build_config/SDL_build_config.h \
   /Users/josh/Downloads/CS225-Project/vendored/SDL/include/SDL3/SDL_platform_defines.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \

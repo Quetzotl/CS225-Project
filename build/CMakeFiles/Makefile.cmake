@@ -116,9 +116,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "Debug/hello.app/Contents/MacOS"
-  "Debug/hello.app/Contents/Info.plist"
-  "Debug/hello.app/Contents/Info.plist"
+  "Debug/minesweeper.app/Contents/MacOS"
+  "Debug/minesweeper.app/Contents/Info.plist"
+  "Debug/minesweeper.app/Contents/Info.plist"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "vendored/SDL/CMakeFiles/SDL_build_config.h.intermediate"
   "vendored/SDL/CMakeFiles/git-data/HEAD"
@@ -133,7 +133,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/hello.dir/DependInfo.cmake"
+  "CMakeFiles/minesweeper.dir/DependInfo.cmake"
   "vendored/SDL/CMakeFiles/SDL3-shared.dir/DependInfo.cmake"
   "vendored/SDL/CMakeFiles/SDL3_test.dir/DependInfo.cmake"
   "vendored/SDL/CMakeFiles/SDL_uclibc.dir/DependInfo.cmake"

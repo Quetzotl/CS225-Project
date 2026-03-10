@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /Users/josh/Downloads/CS225-Project/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/hello.dir/all
+all: CMakeFiles/minesweeper.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/hello.dir/codegen
+codegen: CMakeFiles/minesweeper.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,7 +75,7 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/hello.dir/clean
+clean: CMakeFiles/minesweeper.dir/clean
 clean: vendored/SDL/clean
 .PHONY : clean
 
@@ -105,36 +105,36 @@ vendored/SDL/clean: vendored/SDL/CMakeFiles/SDL_uclibc.dir/clean
 .PHONY : vendored/SDL/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/hello.dir
+# Target rules for target CMakeFiles/minesweeper.dir
 
 # All Build rule for target.
-CMakeFiles/hello.dir/all: vendored/SDL/CMakeFiles/SDL3-shared.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=100 "Built target hello"
-.PHONY : CMakeFiles/hello.dir/all
+CMakeFiles/minesweeper.dir/all: vendored/SDL/CMakeFiles/SDL3-shared.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=100 "Built target minesweeper"
+.PHONY : CMakeFiles/minesweeper.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/hello.dir/rule: cmake_check_build_system
+CMakeFiles/minesweeper.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/josh/Downloads/CS225-Project/build/CMakeFiles 96
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hello.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/minesweeper.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/josh/Downloads/CS225-Project/build/CMakeFiles 0
-.PHONY : CMakeFiles/hello.dir/rule
+.PHONY : CMakeFiles/minesweeper.dir/rule
 
 # Convenience name for target.
-hello: CMakeFiles/hello.dir/rule
-.PHONY : hello
+minesweeper: CMakeFiles/minesweeper.dir/rule
+.PHONY : minesweeper
 
 # codegen rule for target.
-CMakeFiles/hello.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=100 "Finished codegen for target hello"
-.PHONY : CMakeFiles/hello.dir/codegen
+CMakeFiles/minesweeper.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=100 "Finished codegen for target minesweeper"
+.PHONY : CMakeFiles/minesweeper.dir/codegen
 
 # clean rule for target.
-CMakeFiles/hello.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/clean
-.PHONY : CMakeFiles/hello.dir/clean
+CMakeFiles/minesweeper.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/clean
+.PHONY : CMakeFiles/minesweeper.dir/clean
 
 #=============================================================================
 # Target rules for target vendored/SDL/CMakeFiles/SDL3-shared.dir

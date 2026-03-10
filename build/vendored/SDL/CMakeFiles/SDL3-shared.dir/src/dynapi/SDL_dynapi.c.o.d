@@ -1,6 +1,6 @@
 vendored/SDL/CMakeFiles/SDL3-shared.dir/src/dynapi/SDL_dynapi.c.o: \
   /Users/josh/Downloads/CS225-Project/vendored/SDL/src/dynapi/SDL_dynapi.c \
-  /Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-config-/build_config/SDL_build_config.h \
+  /Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-config-debug/build_config/SDL_build_config.h \
   /Users/josh/Downloads/CS225-Project/vendored/SDL/include/SDL3/SDL_platform_defines.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
