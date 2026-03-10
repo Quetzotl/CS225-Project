@@ -116,9 +116,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "hello.app/Contents/MacOS"
-  "hello.app/Contents/Info.plist"
-  "hello.app/Contents/Info.plist"
+  "Debug/hello.app/Contents/MacOS"
+  "Debug/hello.app/Contents/Info.plist"
+  "Debug/hello.app/Contents/Info.plist"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "vendored/SDL/CMakeFiles/SDL_build_config.h.intermediate"
   "vendored/SDL/CMakeFiles/git-data/HEAD"
@@ -127,7 +127,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "vendored/SDL/include-revision/SDL3/SDL_revision.h"
   "vendored/SDL/SDL3Config.cmake"
   "vendored/SDL/SDL3ConfigVersion.cmake"
-  "vendored/SDL/include-config-/build_config/SDL_build_config.h"
+  "vendored/SDL/include-config-debug/build_config/SDL_build_config.h"
   "vendored/SDL/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
