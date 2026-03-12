@@ -36,12 +36,23 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/josh/Downloads/CS225-Project/vendored/SDL/cmake/sdlplatform.cmake"
   "/Users/josh/Downloads/CS225-Project/vendored/SDL/include/build_config/SDL_build_config.h.cmake"
   "/Users/josh/Downloads/CS225-Project/vendored/SDL/include/build_config/SDL_revision.h.cmake"
+  "/Users/josh/Downloads/CS225-Project/vendored/SDL_image/CMakeLists.txt"
+  "/Users/josh/Downloads/CS225-Project/vendored/SDL_image/cmake/GetGitRevisionDescription.cmake"
+  "/Users/josh/Downloads/CS225-Project/vendored/SDL_image/cmake/PrivateSdlFunctions.cmake"
+  "/Users/josh/Downloads/CS225-Project/vendored/SDL_image/cmake/sdlcpu.cmake"
+  "/Users/josh/Downloads/CS225-Project/vendored/SDL_image/cmake/sdlmanpages.cmake"
+  "/Users/josh/Downloads/CS225-Project/vendored/SDL_image/cmake/sdlplatform.cmake"
+  "/usr/local/share/WebP/cmake/WebPConfig.cmake"
+  "/usr/local/share/WebP/cmake/WebPConfigVersion.cmake"
+  "/usr/local/share/WebP/cmake/WebPTargets-release.cmake"
+  "/usr/local/share/WebP/cmake/WebPTargets.cmake"
   "/usr/local/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/usr/local/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/usr/local/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/local/share/cmake/Modules/CMakeDependentOption.cmake"
+  "/usr/local/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
   "/usr/local/share/cmake/Modules/CMakeGenericSystem.cmake"
   "/usr/local/share/cmake/Modules/CMakeInitializeConfigs.cmake"
   "/usr/local/share/cmake/Modules/CMakeLanguageInformation.cmake"
@@ -73,9 +84,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake/Modules/Compiler/Clang.cmake"
   "/usr/local/share/cmake/Modules/Compiler/GNU.cmake"
   "/usr/local/share/cmake/Modules/FindGit.cmake"
+  "/usr/local/share/cmake/Modules/FindPNG.cmake"
   "/usr/local/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/local/share/cmake/Modules/FindPackageMessage.cmake"
   "/usr/local/share/cmake/Modules/FindPkgConfig.cmake"
+  "/usr/local/share/cmake/Modules/FindThreads.cmake"
+  "/usr/local/share/cmake/Modules/FindZLIB.cmake"
   "/usr/local/share/cmake/Modules/GNUInstallDirs.cmake"
   "/usr/local/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake"
   "/usr/local/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake"
@@ -105,6 +119,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang-OBJC.cmake"
   "/usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake"
   "/usr/local/share/cmake/Modules/Platform/UnixPaths.cmake"
+  "/usr/local/share/cmake/Modules/SelectLibraryConfigurations.cmake"
   "/usr/local/share/cmake/Modules/WriteBasicConfigVersionFile.cmake"
   )
 
@@ -129,6 +144,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "vendored/SDL/SDL3ConfigVersion.cmake"
   "vendored/SDL/include-config-debug/build_config/SDL_build_config.h"
   "vendored/SDL/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "vendored/SDL_image/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -137,4 +153,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "vendored/SDL/CMakeFiles/SDL3-shared.dir/DependInfo.cmake"
   "vendored/SDL/CMakeFiles/SDL3_test.dir/DependInfo.cmake"
   "vendored/SDL/CMakeFiles/SDL_uclibc.dir/DependInfo.cmake"
+  "vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/DependInfo.cmake"
   )

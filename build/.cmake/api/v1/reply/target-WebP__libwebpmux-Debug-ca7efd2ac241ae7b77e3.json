@@ -1,0 +1,95 @@
+{
+	"abstract" : true,
+	"artifacts" : 
+	[
+		{
+			"path" : "/usr/local/lib/libwebpmux.3.1.2.dylib"
+		}
+	],
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include",
+			"find_package",
+			"set_target_properties"
+		],
+		"files" : 
+		[
+			"/usr/local/share/WebP/cmake/WebPTargets.cmake",
+			"/usr/local/share/WebP/cmake/WebPConfig.cmake",
+			"vendored/SDL_image/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 1086,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 35,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 90,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 92,
+				"parent" : 4
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	},
+	"id" : "WebP::libwebpmux::@232c000527a460fae7da",
+	"imported" : true,
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 6,
+			"id" : "WebP::webp::@232c000527a460fae7da"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 6,
+			"id" : "WebP::webp::@232c000527a460fae7da"
+		}
+	],
+	"local" : true,
+	"name" : "WebP::libwebpmux",
+	"nameOnDisk" : "libwebpmux.3.1.2.dylib",
+	"paths" : 
+	{
+		"build" : "vendored/SDL_image",
+		"source" : "vendored/SDL_image"
+	},
+	"sources" : [],
+	"type" : "SHARED_LIBRARY"
+}

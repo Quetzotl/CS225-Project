@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Build the library as a shared library
+BUILD_SHARED_LIBS:BOOL=ON
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -205,6 +208,9 @@ CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
 // inside the indicated SDK.
 CMAKE_OSX_SYSROOT:STRING=
 
+//Build static libraries with -fPIC
+CMAKE_POSITION_INDEPENDENT_CODE:BOOL=ON
+
 //Value Computed by CMake
 CMAKE_PROJECT_COMPAT_VERSION:STATIC=
 
@@ -215,7 +221,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=hello
+CMAKE_PROJECT_NAME:STATIC=minesweeper
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -333,6 +339,18 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/pkg-config
 
+//The directory containing a CMake configuration file for PNG.
+PNG_DIR:PATH=PNG_DIR-NOTFOUND
+
+//Path to a library.
+PNG_LIBRARY_DEBUG:FILEPATH=PNG_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+PNG_LIBRARY_RELEASE:FILEPATH=/usr/local/lib/libpng.dylib
+
+//Path to a file.
+PNG_PNG_INCLUDE_DIR:PATH=/Library/Frameworks/Mono.framework/Headers
+
 //Value Computed by CMake
 SDL3_BINARY_DIR:STATIC=/Users/josh/Downloads/CS225-Project/build/vendored/SDL
 
@@ -341,6 +359,138 @@ SDL3_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 SDL3_SOURCE_DIR:STATIC=/Users/josh/Downloads/CS225-Project/vendored/SDL
+
+//Value Computed by CMake
+SDL3_image_BINARY_DIR:STATIC=/Users/josh/Downloads/CS225-Project/build/vendored/SDL_image
+
+//Value Computed by CMake
+SDL3_image_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+SDL3_image_SOURCE_DIR:STATIC=/Users/josh/Downloads/CS225-Project/vendored/SDL_image
+
+//Support loading ANI animations
+SDLIMAGE_ANI:BOOL=ON
+
+//Add ANI save support
+SDLIMAGE_ANI_SAVE:BOOL=ON
+
+//Support loading AVIF images
+SDLIMAGE_AVIF:BOOL=ON
+
+//Add AVIF save support
+SDLIMAGE_AVIF_SAVE:BOOL=ON
+
+//Dynamically load AVIF support (requires shared libavif)
+SDLIMAGE_AVIF_SHARED:BOOL=ON
+
+//Use native Mac OS X frameworks for loading images
+SDLIMAGE_BACKEND_IMAGEIO:BOOL=ON
+
+//Use stb_image for loading JPEG files
+SDLIMAGE_BACKEND_STB:BOOL=ON
+
+//Support loading BMP images
+SDLIMAGE_BMP:BOOL=ON
+
+//Add BMP save support
+SDLIMAGE_BMP_SAVE:BOOL=ON
+
+//Load dependencies dynamically
+SDLIMAGE_DEPS_SHARED:BOOL=ON
+
+//Support loading GIF images
+SDLIMAGE_GIF:BOOL=ON
+
+//Add GIF save support
+SDLIMAGE_GIF_SAVE:BOOL=ON
+
+//Enable SDL3_image install target
+SDLIMAGE_INSTALL:BOOL=OFF
+
+//Support loading JPEG images
+SDLIMAGE_JPG:BOOL=ON
+
+//Add JPEG save support
+SDLIMAGE_JPG_SAVE:BOOL=ON
+
+//Support loading JXL images
+SDLIMAGE_JXL:BOOL=OFF
+
+//Support loading LBM images
+SDLIMAGE_LBM:BOOL=ON
+
+//Support loading PCX images
+SDLIMAGE_PCX:BOOL=ON
+
+//Support loading PNG images
+SDLIMAGE_PNG:BOOL=ON
+
+//Support loading PNGs using libpng (useful for APNGs)
+SDLIMAGE_PNG_LIBPNG:BOOL=ON
+
+//Add PNG save support
+SDLIMAGE_PNG_SAVE:BOOL=ON
+
+//Dynamically load PNG support (requires shared libpng)
+SDLIMAGE_PNG_SHARED:BOOL=ON
+
+//Support loading PNM images
+SDLIMAGE_PNM:BOOL=ON
+
+//Support loading QOI images
+SDLIMAGE_QOI:BOOL=ON
+
+//Build the SDL3_image sample program(s)
+SDLIMAGE_SAMPLES:BOOL=OFF
+
+//Fail when a dependency could not be found
+SDLIMAGE_STRICT:BOOL=OFF
+
+//Support loading SVG images
+SDLIMAGE_SVG:BOOL=ON
+
+//Build unit tests?
+SDLIMAGE_TESTS:BOOL=OFF
+
+//Install unit tests?
+SDLIMAGE_TESTS_INSTALL:BOOL=OFF
+
+//Support loading TGA images
+SDLIMAGE_TGA:BOOL=ON
+
+//Add TGA save support
+SDLIMAGE_TGA_SAVE:BOOL=ON
+
+//Support loading TIFF images
+SDLIMAGE_TIF:BOOL=ON
+
+//Dynamically load TIFF support (requires shared libtiff)
+SDLIMAGE_TIF_SHARED:BOOL=ON
+
+//Use vendored third-party libraries
+SDLIMAGE_VENDORED:BOOL=OFF
+
+//Support loading WEBP images
+SDLIMAGE_WEBP:BOOL=ON
+
+//Add WEBP save support
+SDLIMAGE_WEBP_SAVE:BOOL=ON
+
+//Dynamically load WEBP support (requires shared libwebp)
+SDLIMAGE_WEBP_SHARED:BOOL=ON
+
+//Treat warnings as errors
+SDLIMAGE_WERROR:BOOL=OFF
+
+//Support loading XCF images
+SDLIMAGE_XCF:BOOL=ON
+
+//Support loading XPM images
+SDLIMAGE_XPM:BOOL=ON
+
+//Support loading XV images
+SDLIMAGE_XV:BOOL=ON
 
 //Support the ALSA audio API
 SDL_ALSA:BOOL=OFF
@@ -610,6 +760,21 @@ SDL_WERROR:BOOL=OFF
 //Use X11 video driver
 SDL_X11:BOOL=OFF
 
+//The directory containing a CMake configuration file for Threads.
+Threads_DIR:PATH=Threads_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for ZLIB.
+ZLIB_DIR:PATH=ZLIB_DIR-NOTFOUND
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libz.tbd
+
 //Value Computed by CMake
 hello_BINARY_DIR:STATIC=/Users/josh/Downloads/CS225-Project/build
 
@@ -619,8 +784,23 @@ hello_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 hello_SOURCE_DIR:STATIC=/Users/josh/Downloads/CS225-Project
 
+//The directory containing a CMake configuration file for libavif.
+libavif_DIR:PATH=libavif_DIR-NOTFOUND
+
+//Value Computed by CMake
+minesweeper_BINARY_DIR:STATIC=/Users/josh/Downloads/CS225-Project/build
+
+//Value Computed by CMake
+minesweeper_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+minesweeper_SOURCE_DIR:STATIC=/Users/josh/Downloads/CS225-Project
+
 //Path to a library.
 pkgcfg_lib_PC_LibUSB_usb-1.0:FILEPATH=/usr/local/Cellar/libusb/1.0.29/lib/libusb-1.0.dylib
+
+//The directory containing a CMake configuration file for webp.
+webp_DIR:PATH=/usr/local/share/WebP/cmake
 
 
 ########################
@@ -699,6 +879,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/Users/josh/Downloads/CS225-Project
@@ -755,7 +937,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJC_COMPILER
@@ -844,8 +1026,14 @@ COMPILER_SUPPORTS_WNO_DEPRECATED_DECLARATIONS:INTERNAL=1
 COMPILER_SUPPORTS_WNO_ERROR_DEPRECATED_DECLARATIONS:INTERNAL=1
 //Details about finding LibUSB
 FIND_PACKAGE_MESSAGE_DETAILS_LibUSB:INTERNAL=[/usr/local/Cellar/libusb/1.0.29/lib/libusb-1.0.dylib][/usr/local/Cellar/libusb/1.0.29/include/libusb-1.0][v1.0.29()]
+//Details about finding PNG
+FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[/usr/local/lib/libpng.dylib][/Library/Frameworks/Mono.framework/Headers][v1.4.12()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/local/bin/pkg-config][v2.5.1()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libz.tbd][/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include][ ][v1.2.12()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have include alloca.h
@@ -948,6 +1136,8 @@ HAVE_SYSCONF:INTERNAL=1
 HAVE_SYSCTLBYNAME:INTERNAL=1
 //Test HAVE_WL_VERSION_SCRIPT
 HAVE_WL_VERSION_SCRIPT:INTERNAL=
+//Test HAVE_WNO_ERROR_DEPRECATED_DECLARATIONS
+HAVE_WNO_ERROR_DEPRECATED_DECLARATIONS:INTERNAL=1
 //Have symbol abs
 LIBC_HAS_ABS:INTERNAL=1
 //Have symbol acos
@@ -1194,6 +1384,8 @@ LIBC_ISINF_HANDLES_FLOAT:INTERNAL=1
 LIBC_ISNAN_HANDLES_FLOAT:INTERNAL=1
 //Have symbol __GLIBC__
 LIBC_IS_GLIBC:INTERNAL=
+//Test LINKER_SUPPORTS_VERSION_SCRIPT
+LINKER_SUPPORTS_VERSION_SCRIPT:INTERNAL=
 //Test LINKER_SUPPORTS_WL_NO_UNDEFINED
 LINKER_SUPPORTS_WL_NO_UNDEFINED:INTERNAL=
 PC_LibUSB_CFLAGS:INTERNAL=-I/usr/local/Cellar/libusb/1.0.29/include/libusb-1.0
@@ -1235,12 +1427,24 @@ PC_LibUSB_libusb-1.0_VERSION:INTERNAL=
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PNG_LIBRARY_DEBUG
+PNG_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PNG_LIBRARY_RELEASE
+PNG_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PNG_PNG_INCLUDE_DIR
+PNG_PNG_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SDL_CHECK_REQUIRED_INCLUDES
 SDL_CHECK_REQUIRED_INCLUDES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SDL_CHECK_REQUIRED_LINK_OPTIONS
 SDL_CHECK_REQUIRED_LINK_OPTIONS-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
 SDL_CPU_CHECK_ALL:INTERNAL=TRUE
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 __pkg_config_arguments_PC_LibUSB:INTERNAL=libusb-1.0>=1.0.16

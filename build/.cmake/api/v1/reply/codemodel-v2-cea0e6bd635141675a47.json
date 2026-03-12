@@ -19,6 +19,13 @@
 					"projectIndex" : 1
 				},
 				{
+					"directoryIndex" : 2,
+					"id" : "PNG::PNG::@232c000527a460fae7da",
+					"jsonFile" : "target-PNG__PNG-Debug-cb8bfeb54bbe7a483657.json",
+					"name" : "PNG::PNG",
+					"projectIndex" : 2
+				},
+				{
 					"directoryIndex" : 1,
 					"id" : "SDL3-collector::@8fb704815aaca498baa2",
 					"jsonFile" : "target-SDL3-collector-Debug-a0b32e72470160b1a19f.json",
@@ -38,6 +45,55 @@
 					"jsonFile" : "target-SDL3_test-collector-Debug-0b320e049c8dc5967524.json",
 					"name" : "SDL3_test-collector",
 					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Threads::Threads::@232c000527a460fae7da",
+					"jsonFile" : "target-Threads__Threads-Debug-b4f8d28f09ee8ff8b4db.json",
+					"name" : "Threads::Threads",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "WebP::libwebpmux::@232c000527a460fae7da",
+					"jsonFile" : "target-WebP__libwebpmux-Debug-ca7efd2ac241ae7b77e3.json",
+					"name" : "WebP::libwebpmux",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "WebP::sharpyuv::@232c000527a460fae7da",
+					"jsonFile" : "target-WebP__sharpyuv-Debug-c133dfe0871d7ddab8bf.json",
+					"name" : "WebP::sharpyuv",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "WebP::webp::@232c000527a460fae7da",
+					"jsonFile" : "target-WebP__webp-Debug-0cecd72eab6213c176c0.json",
+					"name" : "WebP::webp",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "WebP::webpdecoder::@232c000527a460fae7da",
+					"jsonFile" : "target-WebP__webpdecoder-Debug-2c5ad250bc5682e1a472.json",
+					"name" : "WebP::webpdecoder",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "WebP::webpdemux::@232c000527a460fae7da",
+					"jsonFile" : "target-WebP__webpdemux-Debug-25b231b9c98db8223269.json",
+					"name" : "WebP::webpdemux",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ZLIB::ZLIB::@232c000527a460fae7da",
+					"jsonFile" : "target-ZLIB__ZLIB-Debug-5a21e9e1fa8ba368993c.json",
+					"name" : "ZLIB::ZLIB",
+					"projectIndex" : 2
 				}
 			],
 			"directories" : 
@@ -46,7 +102,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"jsonFile" : "directory-.-Debug-9ad1a58d4644cf6543fa.json",
 					"minimumCMakeVersion" : 
@@ -57,7 +114,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				},
 				{
@@ -65,9 +122,9 @@
 					[
 						0,
 						1,
-						2,
 						3,
-						4
+						4,
+						5
 					],
 					"build" : "vendored/SDL",
 					"jsonFile" : "directory-vendored.SDL-Debug-bdcbd5172f44d7444ad5.json",
@@ -81,8 +138,34 @@
 					"targetIndexes" : 
 					[
 						0,
-						1,
-						2
+						2,
+						3
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						2,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"build" : "vendored/SDL_image",
+					"jsonFile" : "directory-vendored.SDL_image-Debug-c68b8153db808febd5f9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "vendored/SDL_image",
+					"targetIndexes" : 
+					[
+						1
 					]
 				}
 			],
@@ -92,16 +175,17 @@
 				{
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
 						0
 					],
-					"name" : "hello",
+					"name" : "minesweeper",
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				},
 				{
@@ -109,9 +193,9 @@
 					[
 						0,
 						1,
-						2,
 						3,
-						4
+						4,
+						5
 					],
 					"directoryIndexes" : 
 					[
@@ -122,8 +206,31 @@
 					"targetIndexes" : 
 					[
 						0,
-						1,
+						2,
+						3
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						2,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"directoryIndexes" : 
+					[
 						2
+					],
+					"name" : "SDL3_image",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
 					]
 				}
 			],
@@ -135,6 +242,13 @@
 					"jsonFile" : "target-SDL3-shared-Debug-7a9c147fb736f0e9f427.json",
 					"name" : "SDL3-shared",
 					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "SDL3_image-shared::@232c000527a460fae7da",
+					"jsonFile" : "target-SDL3_image-shared-Debug-41f582a2740a2921212f.json",
+					"name" : "SDL3_image-shared",
+					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 1,
@@ -153,7 +267,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "minesweeper::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-minesweeper-Debug-de917d5320e6a90e2627.json",
+					"jsonFile" : "target-minesweeper-Debug-f3f77f6f823245741d1a.json",
 					"name" : "minesweeper",
 					"projectIndex" : 0
 				}

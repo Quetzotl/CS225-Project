@@ -95,6 +95,7 @@ minesweeper_EXTERNAL_OBJECTS =
 
 Debug/minesweeper.app/Contents/MacOS/minesweeper: CMakeFiles/minesweeper.dir/main.cpp.o
 Debug/minesweeper.app/Contents/MacOS/minesweeper: CMakeFiles/minesweeper.dir/build.make
+Debug/minesweeper.app/Contents/MacOS/minesweeper: Debug/libSDL3_image.0.5.0.dylib
 Debug/minesweeper.app/Contents/MacOS/minesweeper: Debug/libSDL3.0.dylib
 Debug/minesweeper.app/Contents/MacOS/minesweeper: /Users/josh/Downloads/CS225-Project/vendored/SDL/src/dynapi/SDL_dynapi.sym
 Debug/minesweeper.app/Contents/MacOS/minesweeper: CMakeFiles/minesweeper.dir/link.txt

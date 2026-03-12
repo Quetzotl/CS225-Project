@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include
+CXX_INCLUDES = -I/Users/josh/Downloads/CS225-Project/vendored/SDL_image/include -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include
 
-CXX_FLAGS = -g
+CXX_FLAGS = -g -fPIE
 
