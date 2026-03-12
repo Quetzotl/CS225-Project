@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /Users/josh/Downloads/CS225-Project/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/minesweeper.dir/all
+all: CMakeFiles/Minesweeper.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/minesweeper.dir/codegen
+codegen: CMakeFiles/Minesweeper.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,7 +75,7 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/minesweeper.dir/clean
+clean: CMakeFiles/Minesweeper.dir/clean
 clean: vendored/SDL/clean
 clean: vendored/SDL_image/clean
 .PHONY : clean
@@ -125,37 +125,37 @@ vendored/SDL_image/clean: vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/cl
 .PHONY : vendored/SDL_image/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/minesweeper.dir
+# Target rules for target CMakeFiles/Minesweeper.dir
 
 # All Build rule for target.
-CMakeFiles/minesweeper.dir/all: vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/all
-CMakeFiles/minesweeper.dir/all: vendored/SDL/CMakeFiles/SDL3-shared.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=100 "Built target minesweeper"
-.PHONY : CMakeFiles/minesweeper.dir/all
+CMakeFiles/Minesweeper.dir/all: vendored/SDL/CMakeFiles/SDL3-shared.dir/all
+CMakeFiles/Minesweeper.dir/all: vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=1 "Built target Minesweeper"
+.PHONY : CMakeFiles/Minesweeper.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/minesweeper.dir/rule: cmake_check_build_system
+CMakeFiles/Minesweeper.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/josh/Downloads/CS225-Project/build/CMakeFiles 96
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/minesweeper.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Minesweeper.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/josh/Downloads/CS225-Project/build/CMakeFiles 0
-.PHONY : CMakeFiles/minesweeper.dir/rule
+.PHONY : CMakeFiles/Minesweeper.dir/rule
 
 # Convenience name for target.
-minesweeper: CMakeFiles/minesweeper.dir/rule
-.PHONY : minesweeper
+Minesweeper: CMakeFiles/Minesweeper.dir/rule
+.PHONY : Minesweeper
 
 # codegen rule for target.
-CMakeFiles/minesweeper.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=100 "Finished codegen for target minesweeper"
-.PHONY : CMakeFiles/minesweeper.dir/codegen
+CMakeFiles/Minesweeper.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=1 "Finished codegen for target Minesweeper"
+.PHONY : CMakeFiles/Minesweeper.dir/codegen
 
 # clean rule for target.
-CMakeFiles/minesweeper.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/clean
-.PHONY : CMakeFiles/minesweeper.dir/clean
+CMakeFiles/Minesweeper.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/clean
+.PHONY : CMakeFiles/Minesweeper.dir/clean
 
 #=============================================================================
 # Target rules for target vendored/SDL/CMakeFiles/SDL3-shared.dir
@@ -164,7 +164,7 @@ CMakeFiles/minesweeper.dir/clean:
 vendored/SDL/CMakeFiles/SDL3-shared.dir/all: vendored/SDL/CMakeFiles/SDL_uclibc.dir/all
 	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3-shared.dir/build.make vendored/SDL/CMakeFiles/SDL3-shared.dir/depend
 	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3-shared.dir/build.make vendored/SDL/CMakeFiles/SDL3-shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77 "Built target SDL3-shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78 "Built target SDL3-shared"
 .PHONY : vendored/SDL/CMakeFiles/SDL3-shared.dir/all
 
 # Build rule for subdir invocation for target.
@@ -181,7 +181,7 @@ SDL3-shared: vendored/SDL/CMakeFiles/SDL3-shared.dir/rule
 # codegen rule for target.
 vendored/SDL/CMakeFiles/SDL3-shared.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3-shared.dir/build.make vendored/SDL/CMakeFiles/SDL3-shared.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77 "Finished codegen for target SDL3-shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78 "Finished codegen for target SDL3-shared"
 .PHONY : vendored/SDL/CMakeFiles/SDL3-shared.dir/codegen
 
 # clean rule for target.
@@ -196,7 +196,7 @@ vendored/SDL/CMakeFiles/SDL3-shared.dir/clean:
 vendored/SDL/CMakeFiles/SDL3_test.dir/all:
 	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3_test.dir/build.make vendored/SDL/CMakeFiles/SDL3_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3_test.dir/build.make vendored/SDL/CMakeFiles/SDL3_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=87,88,89,90 "Built target SDL3_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=88,89,90,91 "Built target SDL3_test"
 .PHONY : vendored/SDL/CMakeFiles/SDL3_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -213,7 +213,7 @@ SDL3_test: vendored/SDL/CMakeFiles/SDL3_test.dir/rule
 # codegen rule for target.
 vendored/SDL/CMakeFiles/SDL3_test.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL3_test.dir/build.make vendored/SDL/CMakeFiles/SDL3_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=87,88,89,90 "Finished codegen for target SDL3_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=88,89,90,91 "Finished codegen for target SDL3_test"
 .PHONY : vendored/SDL/CMakeFiles/SDL3_test.dir/codegen
 
 # clean rule for target.
@@ -228,7 +228,7 @@ vendored/SDL/CMakeFiles/SDL3_test.dir/clean:
 vendored/SDL/CMakeFiles/SDL_uclibc.dir/all:
 	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL_uclibc.dir/build.make vendored/SDL/CMakeFiles/SDL_uclibc.dir/depend
 	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL_uclibc.dir/build.make vendored/SDL/CMakeFiles/SDL_uclibc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=91,92,93,94,95,96,97,98,99 "Built target SDL_uclibc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=92,93,94,95,96,97,98,99,100 "Built target SDL_uclibc"
 .PHONY : vendored/SDL/CMakeFiles/SDL_uclibc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -245,7 +245,7 @@ SDL_uclibc: vendored/SDL/CMakeFiles/SDL_uclibc.dir/rule
 # codegen rule for target.
 vendored/SDL/CMakeFiles/SDL_uclibc.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f vendored/SDL/CMakeFiles/SDL_uclibc.dir/build.make vendored/SDL/CMakeFiles/SDL_uclibc.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=91,92,93,94,95,96,97,98,99 "Finished codegen for target SDL_uclibc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=92,93,94,95,96,97,98,99,100 "Finished codegen for target SDL_uclibc"
 .PHONY : vendored/SDL/CMakeFiles/SDL_uclibc.dir/codegen
 
 # clean rule for target.
@@ -260,7 +260,7 @@ vendored/SDL/CMakeFiles/SDL_uclibc.dir/clean:
 vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/all: vendored/SDL/CMakeFiles/SDL3-shared.dir/all
 	$(MAKE) $(MAKESILENT) -f vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/build.make vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/depend
 	$(MAKE) $(MAKESILENT) -f vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/build.make vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=78,79,80,81,82,83,84,85,86 "Built target SDL3_image-shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=79,80,81,82,83,84,85,86,87 "Built target SDL3_image-shared"
 .PHONY : vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/all
 
 # Build rule for subdir invocation for target.
@@ -277,7 +277,7 @@ SDL3_image-shared: vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/rule
 # codegen rule for target.
 vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/build.make vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=78,79,80,81,82,83,84,85,86 "Finished codegen for target SDL3_image-shared"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=79,80,81,82,83,84,85,86,87 "Finished codegen for target SDL3_image-shared"
 .PHONY : vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/codegen
 
 # clean rule for target.

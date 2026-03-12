@@ -104,7 +104,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake/Modules/Linker/AppleClang-CXX.cmake"
   "/usr/local/share/cmake/Modules/Linker/AppleClang-OBJC.cmake"
   "/usr/local/share/cmake/Modules/Linker/AppleClang.cmake"
-  "/usr/local/share/cmake/Modules/MacOSXBundleInfo.plist.in"
   "/usr/local/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake"
   "/usr/local/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake"
   "/usr/local/share/cmake/Modules/Platform/Apple-AppleClang-OBJC.cmake"
@@ -131,9 +130,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "Debug/minesweeper.app/Contents/MacOS"
-  "Debug/minesweeper.app/Contents/Info.plist"
-  "Debug/minesweeper.app/Contents/Info.plist"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "vendored/SDL/CMakeFiles/SDL_build_config.h.intermediate"
   "vendored/SDL/CMakeFiles/git-data/HEAD"
@@ -149,7 +145,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/minesweeper.dir/DependInfo.cmake"
+  "CMakeFiles/Minesweeper.dir/DependInfo.cmake"
   "vendored/SDL/CMakeFiles/SDL3-shared.dir/DependInfo.cmake"
   "vendored/SDL/CMakeFiles/SDL3_test.dir/DependInfo.cmake"
   "vendored/SDL/CMakeFiles/SDL_uclibc.dir/DependInfo.cmake"

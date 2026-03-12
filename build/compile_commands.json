@@ -1,9 +1,15 @@
 [
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build",
-  "command": "/usr/bin/clang++  -I/Users/josh/Downloads/CS225-Project/vendored/SDL_image/include -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIE -o CMakeFiles/minesweeper.dir/main.cpp.o -c /Users/josh/Downloads/CS225-Project/main.cpp",
-  "file": "/Users/josh/Downloads/CS225-Project/main.cpp",
-  "output": "CMakeFiles/minesweeper.dir/main.cpp.o"
+  "command": "/usr/bin/clang++  -I/Users/josh/Downloads/CS225-Project/include -I/Users/josh/Downloads/CS225-Project/vendored/SDL_image/include -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIE -o CMakeFiles/Minesweeper.dir/src/main.cpp.o -c /Users/josh/Downloads/CS225-Project/src/main.cpp",
+  "file": "/Users/josh/Downloads/CS225-Project/src/main.cpp",
+  "output": "CMakeFiles/Minesweeper.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/josh/Downloads/CS225-Project/build",
+  "command": "/usr/bin/clang++  -I/Users/josh/Downloads/CS225-Project/include -I/Users/josh/Downloads/CS225-Project/vendored/SDL_image/include -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIE -o CMakeFiles/Minesweeper.dir/src/tileRender.cpp.o -c /Users/josh/Downloads/CS225-Project/src/tileRender.cpp",
+  "file": "/Users/josh/Downloads/CS225-Project/src/tileRender.cpp",
+  "output": "CMakeFiles/Minesweeper.dir/src/tileRender.cpp.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",
@@ -1525,61 +1531,61 @@
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",
-  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_assert.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_assert.c",
+  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_assert.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_assert.c",
   "file": "/Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_assert.c",
   "output": "vendored/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_assert.c.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",
-  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_common.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_common.c",
+  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_common.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_common.c",
   "file": "/Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_common.c",
   "output": "vendored/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_common.c.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",
-  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_compare.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_compare.c",
+  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_compare.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_compare.c",
   "file": "/Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_compare.c",
   "output": "vendored/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_compare.c.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",
-  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_crc32.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_crc32.c",
+  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_crc32.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_crc32.c",
   "file": "/Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_crc32.c",
   "output": "vendored/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_crc32.c.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",
-  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_font.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_font.c",
+  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_font.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_font.c",
   "file": "/Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_font.c",
   "output": "vendored/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_font.c.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",
-  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_fuzzer.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_fuzzer.c",
+  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_fuzzer.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_fuzzer.c",
   "file": "/Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_fuzzer.c",
   "output": "vendored/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_fuzzer.c.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",
-  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_harness.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_harness.c",
+  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_harness.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_harness.c",
   "file": "/Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_harness.c",
   "output": "vendored/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_harness.c.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",
-  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_log.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_log.c",
+  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_log.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_log.c",
   "file": "/Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_log.c",
   "output": "vendored/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_log.c.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",
-  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_md5.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_md5.c",
+  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_md5.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_md5.c",
   "file": "/Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_md5.c",
   "output": "vendored/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_md5.c.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",
-  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_memory.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_memory.c",
+  "command": "/usr/bin/clang -DDEBUG -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics -o CMakeFiles/SDL3_test.dir/src/test/SDL_test_memory.c.o -c /Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_memory.c",
   "file": "/Users/josh/Downloads/CS225-Project/vendored/SDL/src/test/SDL_test_memory.c",
   "output": "vendored/SDL/CMakeFiles/SDL3_test.dir/src/test/SDL_test_memory.c.o"
 },

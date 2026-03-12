@@ -6,5 +6,5 @@ C_DEFINES = -DDEBUG
 
 C_INCLUDES = -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include
 
-C_FLAGS = -g -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics
+C_FLAGS = -g -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics
 

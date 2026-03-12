@@ -105,16 +105,17 @@
 						1,
 						2
 					],
-					"jsonFile" : "directory-.-Debug-9ad1a58d4644cf6543fa.json",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-827d5671ec06498e6737.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.16"
+						"string" : "3.12"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						4
+						0
 					]
 				},
 				{
@@ -137,9 +138,9 @@
 					"source" : "vendored/SDL",
 					"targetIndexes" : 
 					[
-						0,
-						2,
-						3
+						1,
+						3,
+						4
 					]
 				},
 				{
@@ -165,7 +166,7 @@
 					"source" : "vendored/SDL_image",
 					"targetIndexes" : 
 					[
-						1
+						2
 					]
 				}
 			],
@@ -182,10 +183,10 @@
 					[
 						0
 					],
-					"name" : "minesweeper",
+					"name" : "Minesweeper",
 					"targetIndexes" : 
 					[
-						4
+						0
 					]
 				},
 				{
@@ -205,9 +206,9 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						0,
-						2,
-						3
+						1,
+						3,
+						4
 					]
 				},
 				{
@@ -230,12 +231,19 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						1
+						2
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Minesweeper::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Minesweeper-Debug-2531b156272fb0ba5768.json",
+					"name" : "Minesweeper",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 1,
 					"id" : "SDL3-shared::@8fb704815aaca498baa2",
@@ -253,7 +261,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "SDL3_test::@8fb704815aaca498baa2",
-					"jsonFile" : "target-SDL3_test-Debug-6b58832dd69078afb665.json",
+					"jsonFile" : "target-SDL3_test-Debug-25b0f74557cec99731d9.json",
 					"name" : "SDL3_test",
 					"projectIndex" : 1
 				},
@@ -263,13 +271,6 @@
 					"jsonFile" : "target-SDL_uclibc-Debug-1a2a2db1f116da79c35c.json",
 					"name" : "SDL_uclibc",
 					"projectIndex" : 1
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "minesweeper::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-minesweeper-Debug-f3f77f6f823245741d1a.json",
-					"name" : "minesweeper",
-					"projectIndex" : 0
 				}
 			]
 		}

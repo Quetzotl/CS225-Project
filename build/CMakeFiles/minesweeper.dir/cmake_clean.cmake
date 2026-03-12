@@ -1,11 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/minesweeper.dir/main.cpp.o"
-  "CMakeFiles/minesweeper.dir/main.cpp.o.d"
-  "Debug/minesweeper.app/Contents/MacOS/minesweeper"
-  "Debug/minesweeper.pdb"
+  "CMakeFiles/Minesweeper.dir/src/main.cpp.o"
+  "CMakeFiles/Minesweeper.dir/src/main.cpp.o.d"
+  "CMakeFiles/Minesweeper.dir/src/tileRender.cpp.o"
+  "CMakeFiles/Minesweeper.dir/src/tileRender.cpp.o.d"
+  "Debug/Minesweeper"
+  "Debug/Minesweeper.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
 foreach(lang CXX)
-  include(CMakeFiles/minesweeper.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/Minesweeper.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

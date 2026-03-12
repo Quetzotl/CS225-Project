@@ -1378,11 +1378,6 @@
 			"path" : "/usr/local/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake"
 		},
 		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/usr/local/share/cmake/Modules/MacOSXBundleInfo.plist.in"
-		},
-		{
 			"path" : "vendored/SDL/CMakeLists.txt"
 		},
 		{
