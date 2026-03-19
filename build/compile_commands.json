@@ -7,9 +7,9 @@
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build",
-  "command": "/usr/bin/clang++  -I/Users/josh/Downloads/CS225-Project/include -I/Users/josh/Downloads/CS225-Project/vendored/SDL_image/include -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIE -o CMakeFiles/Minesweeper.dir/src/tileRender.cpp.o -c /Users/josh/Downloads/CS225-Project/src/tileRender.cpp",
-  "file": "/Users/josh/Downloads/CS225-Project/src/tileRender.cpp",
-  "output": "CMakeFiles/Minesweeper.dir/src/tileRender.cpp.o"
+  "command": "/usr/bin/clang++  -I/Users/josh/Downloads/CS225-Project/include -I/Users/josh/Downloads/CS225-Project/vendored/SDL_image/include -I/Users/josh/Downloads/CS225-Project/build/vendored/SDL/include-revision -I/Users/josh/Downloads/CS225-Project/vendored/SDL/include -g -fPIE -o CMakeFiles/Minesweeper.dir/src/tilemap.cpp.o -c /Users/josh/Downloads/CS225-Project/src/tilemap.cpp",
+  "file": "/Users/josh/Downloads/CS225-Project/src/tilemap.cpp",
+  "output": "CMakeFiles/Minesweeper.dir/src/tilemap.cpp.o"
 },
 {
   "directory": "/Users/josh/Downloads/CS225-Project/build/vendored/SDL",

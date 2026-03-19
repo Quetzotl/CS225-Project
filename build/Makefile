@@ -85,51 +85,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/josh/Downloads/CS225-Project/build/CMakeFiles /Users/josh/Downloads/CS225-Project/build//CMakeFiles/progress.marks
@@ -251,29 +206,29 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/tileRender.o: src/tileRender.cpp.o
-.PHONY : src/tileRender.o
+src/tilemap.o: src/tilemap.cpp.o
+.PHONY : src/tilemap.o
 
 # target to build an object file
-src/tileRender.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/tileRender.cpp.o
-.PHONY : src/tileRender.cpp.o
+src/tilemap.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/tilemap.cpp.o
+.PHONY : src/tilemap.cpp.o
 
-src/tileRender.i: src/tileRender.cpp.i
-.PHONY : src/tileRender.i
+src/tilemap.i: src/tilemap.cpp.i
+.PHONY : src/tilemap.i
 
 # target to preprocess a source file
-src/tileRender.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/tileRender.cpp.i
-.PHONY : src/tileRender.cpp.i
+src/tilemap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/tilemap.cpp.i
+.PHONY : src/tilemap.cpp.i
 
-src/tileRender.s: src/tileRender.cpp.s
-.PHONY : src/tileRender.s
+src/tilemap.s: src/tilemap.cpp.s
+.PHONY : src/tilemap.s
 
 # target to generate assembly for a file
-src/tileRender.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/tileRender.cpp.s
-.PHONY : src/tileRender.cpp.s
+src/tilemap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/tilemap.cpp.s
+.PHONY : src/tilemap.cpp.s
 
 # Help Target
 help:
@@ -282,10 +237,6 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Minesweeper"
 	@echo "... SDL3-shared"
@@ -295,9 +246,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/tileRender.o"
-	@echo "... src/tileRender.i"
-	@echo "... src/tileRender.s"
+	@echo "... src/tilemap.o"
+	@echo "... src/tilemap.i"
+	@echo "... src/tilemap.s"
 .PHONY : help
 
 
