@@ -14,6 +14,7 @@ add_subdirectory(vendored/SDL_image EXCLUDE_FROM_ALL)
 set(SOURCES
     src/main.cpp
     src/tilemap.cpp
+    src/minesweeper.cpp
 )
 
 # Add asset files

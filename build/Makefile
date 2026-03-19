@@ -206,6 +206,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/minesweeper.o: src/minesweeper.cpp.o
+.PHONY : src/minesweeper.o
+
+# target to build an object file
+src/minesweeper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.o
+.PHONY : src/minesweeper.cpp.o
+
+src/minesweeper.i: src/minesweeper.cpp.i
+.PHONY : src/minesweeper.i
+
+# target to preprocess a source file
+src/minesweeper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.i
+.PHONY : src/minesweeper.cpp.i
+
+src/minesweeper.s: src/minesweeper.cpp.s
+.PHONY : src/minesweeper.s
+
+# target to generate assembly for a file
+src/minesweeper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.s
+.PHONY : src/minesweeper.cpp.s
+
 src/tilemap.o: src/tilemap.cpp.o
 .PHONY : src/tilemap.o
 
@@ -246,6 +270,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/minesweeper.o"
+	@echo "... src/minesweeper.i"
+	@echo "... src/minesweeper.s"
 	@echo "... src/tilemap.o"
 	@echo "... src/tilemap.i"
 	@echo "... src/tilemap.s"

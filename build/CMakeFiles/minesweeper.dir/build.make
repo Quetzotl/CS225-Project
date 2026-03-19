@@ -100,22 +100,38 @@ CMakeFiles/Minesweeper.dir/src/tilemap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Minesweeper.dir/src/tilemap.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/josh/Downloads/CS225-Project/src/tilemap.cpp -o CMakeFiles/Minesweeper.dir/src/tilemap.cpp.s
 
+CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.o: CMakeFiles/Minesweeper.dir/flags.make
+CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.o: /Users/josh/Downloads/CS225-Project/src/minesweeper.cpp
+CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.o: CMakeFiles/Minesweeper.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.o -MF CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.o.d -o CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.o -c /Users/josh/Downloads/CS225-Project/src/minesweeper.cpp
+
+CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/josh/Downloads/CS225-Project/src/minesweeper.cpp > CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.i
+
+CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/josh/Downloads/CS225-Project/src/minesweeper.cpp -o CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.s
+
 # Object files for target Minesweeper
 Minesweeper_OBJECTS = \
 "CMakeFiles/Minesweeper.dir/src/main.cpp.o" \
-"CMakeFiles/Minesweeper.dir/src/tilemap.cpp.o"
+"CMakeFiles/Minesweeper.dir/src/tilemap.cpp.o" \
+"CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.o"
 
 # External object files for target Minesweeper
 Minesweeper_EXTERNAL_OBJECTS =
 
 Debug/Minesweeper: CMakeFiles/Minesweeper.dir/src/main.cpp.o
 Debug/Minesweeper: CMakeFiles/Minesweeper.dir/src/tilemap.cpp.o
+Debug/Minesweeper: CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.o
 Debug/Minesweeper: CMakeFiles/Minesweeper.dir/build.make
 Debug/Minesweeper: Debug/libSDL3_image.0.5.0.dylib
 Debug/Minesweeper: Debug/libSDL3.0.dylib
 Debug/Minesweeper: /Users/josh/Downloads/CS225-Project/vendored/SDL/src/dynapi/SDL_dynapi.sym
 Debug/Minesweeper: CMakeFiles/Minesweeper.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Debug/Minesweeper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Debug/Minesweeper"
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying assets to build directory"
 	/usr/local/bin/cmake -E copy_directory /Users/josh/Downloads/CS225-Project/assets /Users/josh/Downloads/CS225-Project/build/Debug/assets
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Minesweeper.dir/link.txt --verbose=$(VERBOSE)
