@@ -804,11 +804,4 @@ CMakeFiles/Minesweeper.dir/src/minesweeper.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_random_bit_generator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
-  /Users/josh/Downloads/CS225-Project/vendored/SDL/include/SDL3/SDL_log.h \
-  /Users/josh/Downloads/CS225-Project/vendored/SDL/include/SDL3/SDL_stdinc.h \
-  /Users/josh/Downloads/CS225-Project/vendored/SDL/include/SDL3/SDL_platform_defines.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h \
-  /Users/josh/Downloads/CS225-Project/vendored/SDL/include/SDL3/SDL_begin_code.h \
-  /Users/josh/Downloads/CS225-Project/vendored/SDL/include/SDL3/SDL_close_code.h \
   /Users/josh/Downloads/CS225-Project/include/Minesweeper/minesweeper.h

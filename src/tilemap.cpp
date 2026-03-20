@@ -18,7 +18,7 @@ SDL_Surface* Tilemap::getTile(const int& n){
     tile.x = tile.y = 0;
     for (int i = 0; i < n; i++){
         tile.x += tile.w;
-        if (tile.x > map->w) {
+        if (tile.x >= map->w) {
             tile.x -= map->w;
             tile.y += tile.h;
         }

@@ -12,6 +12,7 @@ SDL_Renderer* renderer;
 SDL_Texture** tiles;
 SDL_Texture* frame;
 const int GRID_WIDTH = 30, GRID_HEIGHT = 20;
+const double MINE_RATE = .05;
 const int TILE_WIDTH = 32, TILE_HEIGHT = 32, TILE_COUNT = 12;
 const int FRAME_SIZE = 24;
 const int SCREEN_WIDTH = GRID_WIDTH*TILE_WIDTH + 2*FRAME_SIZE;
@@ -19,7 +20,10 @@ const int SCREEN_HEIGHT = GRID_HEIGHT*TILE_HEIGHT + 2*FRAME_SIZE;
 const char* TILE_PATH = "assets/MinesweeperTileset.png";
 const char* FRAME_PATH = "assets/MinesweeperFrame.png";
 std::vector<std::vector<int> > board(GRID_WIDTH, std::vector<int>(GRID_HEIGHT, 0));
-Minesweeper sweep(GRID_WIDTH, GRID_HEIGHT, .25);
+Minesweeper* sweep;
+bool game_start = false;
+bool game_over = false;
+int revealed = 0;
 
 // Initialize the application (runs once on startup)
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv);
@@ -83,7 +87,10 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event){
         SDL_MouseButtonFlags button = SDL_GetMouseState(&mx, &my);
         int x = static_cast<int>((mx - FRAME_SIZE) / TILE_WIDTH);
         int y = static_cast<int>((my - FRAME_SIZE) / TILE_HEIGHT);
-        SDL_Log("%d", button);
+        if (!game_start && button == SDL_BUTTON_LEFT){
+            sweep = new Minesweeper(GRID_WIDTH, GRID_HEIGHT, MINE_RATE, x, y);
+            game_start = true;
+        }
         try {
             switch (board.at(x).at(y)){
                 case 0:
@@ -94,10 +101,46 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event){
                     if (button != SDL_BUTTON_LEFT) 
                         board.at(x).at(y) = 0;
                     break;
+                case 1:
+                    if (!game_over && button == SDL_BUTTON_LEFT){
+                        int sum = 0;
+                        for (int ix = -1; ix <= 1; ix++){
+                            for (int iy = -1; iy <= 1; iy++){
+                                if (x + ix >= GRID_WIDTH || x + ix < 0) continue;
+                                if (y + iy >= GRID_HEIGHT || y + iy < 0) continue;
+                                if (board.at(x + ix).at(y + iy) == -1) sum++;
+                            }
+                        }
+                        if (sum == sweep->clue(x, y)){
+                            for (int ix = -1; ix <= 1; ix++){
+                                for (int iy = -1; iy <= 1; iy++){
+                                    if (x + ix >= GRID_WIDTH || x + ix < 0) continue;
+                                    if (y + iy >= GRID_HEIGHT || y + iy < 0) continue;
+                                    reveal(x + ix, y + iy);
+                                }
+                            }
+                        }
+                    }
+                    break;
             }
         } catch (int i) {
             SDL_Log("Position (%d, %d) out of range: %d", x, y, i);
             return SDL_APP_FAILURE;
+        } catch (std::out_of_range err){
+            // ignore, likely because of clicking the frame
+        }
+        if (revealed == GRID_WIDTH * GRID_HEIGHT - sweep->getMineCount()){
+            board.assign(GRID_WIDTH, std::vector<int>(GRID_HEIGHT, 1));
+            game_over = true;
+            SDL_SetWindowTitle(window, "YOU WIN! - Press 'R' to restart");
+        }
+    } else if (event->type == SDL_EVENT_KEY_DOWN){
+        if (event->key.key == SDLK_R && game_over) {
+            board.assign(GRID_WIDTH, std::vector<int>(GRID_HEIGHT, 0));
+            sweep->reset();
+            game_over = false;
+            game_start = false;
+            SDL_SetWindowTitle(window, "Minesweeper");
         }
     }
     return SDL_APP_CONTINUE;
@@ -119,7 +162,10 @@ SDL_AppResult SDL_AppIterate(void *appstate){
                 static_cast<float>(TILE_HEIGHT)
             };
             int to_render = 10;
-            if (board.at(x).at(y) > 0) to_render = sweep.clue(x, y);
+            if (board.at(x).at(y) > 0) {
+                if (sweep->mine(x, y)) to_render = 9;
+                else to_render = sweep->clue(x, y);
+            }
             else if (board.at(x).at(y) < 0) to_render = 11;
             if (!SDL_RenderTexture(renderer, tiles[to_render], NULL, &rect)){
                 SDL_Log("Failed to render tiles to screen: %s", SDL_GetError());
@@ -136,6 +182,7 @@ SDL_AppResult SDL_AppIterate(void *appstate){
 
 void SDL_AppQuit(void *appstate, SDL_AppResult result) {
     delete[] tiles;
+    delete sweep;
     return;
 }
 
@@ -149,11 +196,13 @@ void makeTiles(SDL_Texture** &out, Tilemap map, const int& count) {
 
 void reveal(const int& x, const int& y) {
     if (board.at(x).at(y) != 0) return;
-    if (sweep.mine(x, y)) {
-        //game over
+    if (sweep->mine(x, y)) {
+        board.assign(GRID_WIDTH, std::vector<int>(GRID_HEIGHT, 1));
+        game_over = true;
+        SDL_SetWindowTitle(window, "GAME OVER - Press 'R' to restart");
     }
     board.at(x).at(y) = 1;
-    if (sweep.clue(x, y) == 0){
+    if (sweep->clue(x, y) == 0){
         for (int ix = -1; ix <= 1; ix++){
             for (int iy = -1; iy <= 1; iy++){
                 if (x + ix >= GRID_WIDTH || x + ix < 0) continue;
@@ -162,4 +211,5 @@ void reveal(const int& x, const int& y) {
             }
         }
     }
+    revealed++;
 }
