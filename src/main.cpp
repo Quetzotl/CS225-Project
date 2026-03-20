@@ -1,8 +1,11 @@
+#include <vector>
+#include <random>
 #include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
 #define SDL_MAIN_USE_CALLBACKS
 #include <SDL3/SDL_main.h>
 #include <Minesweeper/tilemap.h>
+#include <Minesweeper/minesweeper.h>
 
 SDL_Window* window;
 SDL_Renderer* renderer;
@@ -15,6 +18,8 @@ const int SCREEN_WIDTH = GRID_WIDTH*TILE_WIDTH + 2*FRAME_SIZE;
 const int SCREEN_HEIGHT = GRID_HEIGHT*TILE_HEIGHT + 2*FRAME_SIZE;
 const char* TILE_PATH = "assets/MinesweeperTileset.png";
 const char* FRAME_PATH = "assets/MinesweeperFrame.png";
+std::vector<std::vector<int> > board(GRID_WIDTH, std::vector<int>(GRID_HEIGHT, 0));
+Minesweeper sweep(GRID_WIDTH, GRID_HEIGHT, .25);
 
 // Initialize the application (runs once on startup)
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv);
@@ -26,6 +31,8 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event);
 void SDL_AppQuit(void *appstate, SDL_AppResult result);
 // Initialize tiles
 void makeTiles(SDL_Texture** &out, Tilemap map, const int& count);
+// Allows for cascading when you select a tile
+void reveal(const int& x, const int& y);
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv){
     if (!SDL_Init(SDL_INIT_VIDEO)){
@@ -71,6 +78,28 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv){
 
 SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event){
     if (event->type == SDL_EVENT_QUIT) return SDL_APP_SUCCESS;
+    else if (event->type == SDL_EVENT_MOUSE_BUTTON_DOWN){
+        float mx, my;
+        SDL_MouseButtonFlags button = SDL_GetMouseState(&mx, &my);
+        int x = static_cast<int>((mx - FRAME_SIZE) / TILE_WIDTH);
+        int y = static_cast<int>((my - FRAME_SIZE) / TILE_HEIGHT);
+        SDL_Log("%d", button);
+        try {
+            switch (board.at(x).at(y)){
+                case 0:
+                    if (button == SDL_BUTTON_LEFT) reveal(x, y);
+                    else board.at(x).at(y) = -1;
+                    break;
+                case -1:
+                    if (button != SDL_BUTTON_LEFT) 
+                        board.at(x).at(y) = 0;
+                    break;
+            }
+        } catch (int i) {
+            SDL_Log("Position (%d, %d) out of range: %d", x, y, i);
+            return SDL_APP_FAILURE;
+        }
+    }
     return SDL_APP_CONTINUE;
 }
 
@@ -89,7 +118,10 @@ SDL_AppResult SDL_AppIterate(void *appstate){
                 static_cast<float>(TILE_WIDTH),
                 static_cast<float>(TILE_HEIGHT)
             };
-            if (!SDL_RenderTexture(renderer, tiles[10], NULL, &rect)){
+            int to_render = 10;
+            if (board.at(x).at(y) > 0) to_render = sweep.clue(x, y);
+            else if (board.at(x).at(y) < 0) to_render = 11;
+            if (!SDL_RenderTexture(renderer, tiles[to_render], NULL, &rect)){
                 SDL_Log("Failed to render tiles to screen: %s", SDL_GetError());
                 return SDL_APP_FAILURE;
             }
@@ -112,5 +144,22 @@ void makeTiles(SDL_Texture** &out, Tilemap map, const int& count) {
     out = new SDL_Texture*[count];
     for (int i = 0; i < count; i++){
         out[i] = SDL_CreateTextureFromSurface(renderer, map.getTile(i));
+    }
+}
+
+void reveal(const int& x, const int& y) {
+    if (board.at(x).at(y) != 0) return;
+    if (sweep.mine(x, y)) {
+        //game over
+    }
+    board.at(x).at(y) = 1;
+    if (sweep.clue(x, y) == 0){
+        for (int ix = -1; ix <= 1; ix++){
+            for (int iy = -1; iy <= 1; iy++){
+                if (x + ix >= GRID_WIDTH || x + ix < 0) continue;
+                if (y + iy >= GRID_HEIGHT || y + iy < 0) continue;
+                reveal(x + ix, y + iy);
+            }
+        }
     }
 }

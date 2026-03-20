@@ -12,8 +12,7 @@ private:
     bool* mines;
     unsigned short* clues;
     const int w, h, mine_count;
-    static std::mt19937 rng;
-    static std::uniform_real_distribution<double> chance;
+    static double roll();
 };
 
 #endif
