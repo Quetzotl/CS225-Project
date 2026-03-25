@@ -32,13 +32,13 @@ Minesweeper::~Minesweeper(){
     delete[] mines;
 }
 
-bool Minesweeper::mine(const int& x, const int& y){
+bool Minesweeper::mine(const int& x, const int& y) const {
     int pos = x + w*y;
     if (pos < w*h && pos >= 0) return mines[pos];
     else throw pos;
 }
 
-unsigned short Minesweeper::clue(const int& x, const int& y){
+unsigned short Minesweeper::clue(const int& x, const int& y) const {
     int pos = x + w*y;
     if (pos < w*h && pos >= 0) return clues[pos];
     else throw pos;

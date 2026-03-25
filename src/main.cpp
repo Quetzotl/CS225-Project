@@ -6,24 +6,29 @@
 #include <SDL3/SDL_main.h>
 #include <Minesweeper/tilemap.h>
 #include <Minesweeper/minesweeper.h>
+#include <Minesweeper/leaderboard.h>
 
 SDL_Window* window;
 SDL_Renderer* renderer;
 SDL_Texture** tiles;
 SDL_Texture* frame;
 const int GRID_WIDTH = 30, GRID_HEIGHT = 20;
-const double MINE_RATE = .05;
+const double MINE_RATE = .15;
 const int TILE_WIDTH = 32, TILE_HEIGHT = 32, TILE_COUNT = 12;
 const int FRAME_SIZE = 24;
 const int SCREEN_WIDTH = GRID_WIDTH*TILE_WIDTH + 2*FRAME_SIZE;
 const int SCREEN_HEIGHT = GRID_HEIGHT*TILE_HEIGHT + 2*FRAME_SIZE;
 const char* TILE_PATH = "assets/MinesweeperTileset.png";
 const char* FRAME_PATH = "assets/MinesweeperFrame.png";
+const char* LEADERBOARD_PATH = "assets/Leaderboard.txt";
 std::vector<std::vector<int> > board(GRID_WIDTH, std::vector<int>(GRID_HEIGHT, 0));
 Minesweeper* sweep;
 bool game_start = false;
 bool game_over = false;
 int revealed = 0;
+Uint64 ticks = 0;
+Timer time;
+Leaderboard leaderboard(LEADERBOARD_PATH);
 
 // Initialize the application (runs once on startup)
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv);
@@ -37,6 +42,8 @@ void SDL_AppQuit(void *appstate, SDL_AppResult result);
 void makeTiles(SDL_Texture** &out, Tilemap map, const int& count);
 // Allows for cascading when you select a tile
 void reveal(const int& x, const int& y);
+// Increments the timer
+void tick();
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv){
     if (!SDL_Init(SDL_INIT_VIDEO)){
@@ -133,6 +140,7 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event){
             board.assign(GRID_WIDTH, std::vector<int>(GRID_HEIGHT, 1));
             game_over = true;
             SDL_SetWindowTitle(window, "YOU WIN! - Press 'R' to restart");
+            leaderboard.add_score(Score(time));
         }
     } else if (event->type == SDL_EVENT_KEY_DOWN){
         if (event->key.key == SDLK_R && game_over) {
@@ -147,6 +155,7 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event){
 }
 
 SDL_AppResult SDL_AppIterate(void *appstate){
+    tick();
     SDL_RenderClear(renderer);
     if (!SDL_RenderTexture9GridTiled(renderer, frame, NULL, 
         FRAME_SIZE, FRAME_SIZE, FRAME_SIZE, FRAME_SIZE, 0.0f, NULL, 1.0f)){
@@ -190,7 +199,7 @@ void makeTiles(SDL_Texture** &out, Tilemap map, const int& count) {
     delete[] out;
     out = new SDL_Texture*[count];
     for (int i = 0; i < count; i++){
-        out[i] = SDL_CreateTextureFromSurface(renderer, map.getTile(i));
+        out[i] = SDL_CreateTextureFromSurface(renderer, map[i]);
     }
 }
 
@@ -212,4 +221,9 @@ void reveal(const int& x, const int& y) {
         }
     }
     revealed++;
+}
+
+void tick(){
+    time += ticks - SDL_GetTicks();
+    ticks = SDL_GetTicks();
 }

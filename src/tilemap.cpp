@@ -13,7 +13,7 @@ Tilemap::Tilemap(const char* image, const int& tile_width, const int& tile_heigh
     tile.h = tile_height;
 }
 
-SDL_Surface* Tilemap::getTile(const int& n){
+SDL_Surface* Tilemap::operator[](const int& n){
     SDL_Surface* out = SDL_CreateSurface(tile.w, tile.h, SDL_PIXELFORMAT_RGB24);
     tile.x = tile.y = 0;
     for (int i = 0; i < n; i++){
