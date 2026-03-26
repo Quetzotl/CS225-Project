@@ -15,6 +15,7 @@ set(SOURCES
     src/main.cpp
     src/tilemap.cpp
     src/minesweeper.cpp
+    src/leaderboard.cpp
 )
 
 # Add asset files

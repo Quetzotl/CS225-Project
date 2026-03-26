@@ -182,6 +182,30 @@ SDL3_image-shared/fast:
 	$(MAKE) $(MAKESILENT) -f vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/build.make vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/build
 .PHONY : SDL3_image-shared/fast
 
+src/leaderboard.o: src/leaderboard.cpp.o
+.PHONY : src/leaderboard.o
+
+# target to build an object file
+src/leaderboard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/leaderboard.cpp.o
+.PHONY : src/leaderboard.cpp.o
+
+src/leaderboard.i: src/leaderboard.cpp.i
+.PHONY : src/leaderboard.i
+
+# target to preprocess a source file
+src/leaderboard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/leaderboard.cpp.i
+.PHONY : src/leaderboard.cpp.i
+
+src/leaderboard.s: src/leaderboard.cpp.s
+.PHONY : src/leaderboard.s
+
+# target to generate assembly for a file
+src/leaderboard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/src/leaderboard.cpp.s
+.PHONY : src/leaderboard.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -267,6 +291,9 @@ help:
 	@echo "... SDL3_image-shared"
 	@echo "... SDL3_test"
 	@echo "... SDL_uclibc"
+	@echo "... src/leaderboard.o"
+	@echo "... src/leaderboard.i"
+	@echo "... src/leaderboard.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

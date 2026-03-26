@@ -1,19 +1,26 @@
 #include <vector>
 #include <fstream>
+#include <iomanip>
+#include <SDL3/SDL_log.h>
 #include <algorithm>
 #include <Minesweeper/leaderboard.h>
 
-Timer::Timer() : ms(0) { }
+Counter::Counter() : value(0) { }
 
-Timer& Timer::operator+=(const int& n){
-    ms += n;
+Counter& Counter::operator+=(const int& n){
+    value += n;
     return *this;
 }
 
-Score::Score(const Timer& source) : Timer(source) { }
+std::ostream& operator<<(std::ostream& out, const Counter& n){
+    out << n() / 60000 << ':' << std::setw(2) << std::setfill('0') << (n() / 1000) % 60;
+    return out;
+}
 
-Score::Score(const int& value) {
-    ms = (value / 100) * 25000000;
+Score::Score(const Counter& source) : Counter(source) { }
+
+Score::Score(const int& score) {
+    value = (score / 100) * 25000000;
 }
 
 std::ostream& operator<<(std::ostream& out, const Score& n){
@@ -21,8 +28,8 @@ std::ostream& operator<<(std::ostream& out, const Score& n){
     return out;
 }
 
-Leaderboard::Leaderboard(const char* file){
-    std::ifstream load(file);
+Leaderboard::Leaderboard(const char* file) : filename(file){
+    std::ifstream load(filename);
     if (load) {
         int i;
         while (load>>i){
@@ -30,10 +37,10 @@ Leaderboard::Leaderboard(const char* file){
             scores.push_back(Score(i));
         }
     }
-    f.open(file);
 }
 
 Leaderboard::~Leaderboard(){
+    std::ofstream f(filename);
     for (int i = 0; i < scores.size(); i++){
         f << i+1 << ' ' << scores[i] << std::endl;
     }

@@ -3,25 +3,29 @@
 
 #define MAX_LEADERBOARD_SIZE 10
 
-class Timer {
+class Counter {
 protected:
-    std::size_t ms;
+    Uint64 value;
 public:
-    Timer();
-    Timer& operator+=(const int& n);
-    std::size_t operator()() const { return ms; }
+    Counter();
+    Counter& operator+=(const int& n);
+    Uint64 operator()() const { return value; }
+    void reset() {value = 0;}
 };
+std::ostream& operator<<(std::ostream& out, const Counter& n);
 
-class Score : public Timer {
+class Score : public Counter {
 public:
-    Score(const Timer& source);
+    Score() : Counter() {};
+    Score(const Counter& source);
     Score(const int& value);
 };
+std::ostream& operator<<(std::ostream& out, const Score& n);
 
 class Leaderboard {
 private:
     std::vector<Score> scores;
-    std::ofstream f;
+    const char* filename;
 public:
     Leaderboard(const char* file);
     ~Leaderboard();

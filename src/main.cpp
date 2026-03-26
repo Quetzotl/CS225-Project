@@ -1,5 +1,6 @@
 #include <vector>
 #include <random>
+#include <sstream>
 #include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
 #define SDL_MAIN_USE_CALLBACKS
@@ -25,9 +26,10 @@ std::vector<std::vector<int> > board(GRID_WIDTH, std::vector<int>(GRID_HEIGHT, 0
 Minesweeper* sweep;
 bool game_start = false;
 bool game_over = false;
+int flags = 0;
 int revealed = 0;
-Uint64 ticks = 0;
-Timer time;
+Uint64 total_ticks = 0;
+Counter time_elapsed;
 Leaderboard leaderboard(LEADERBOARD_PATH);
 
 // Initialize the application (runs once on startup)
@@ -102,11 +104,15 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event){
             switch (board.at(x).at(y)){
                 case 0:
                     if (button == SDL_BUTTON_LEFT) reveal(x, y);
-                    else board.at(x).at(y) = -1;
+                    else {
+                        board.at(x).at(y) = -1;
+                        flags++;
+                    }
                     break;
                 case -1:
                     if (button != SDL_BUTTON_LEFT) 
                         board.at(x).at(y) = 0;
+                        flags--;
                     break;
                 case 1:
                     if (!game_over && button == SDL_BUTTON_LEFT){
@@ -140,11 +146,12 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event){
             board.assign(GRID_WIDTH, std::vector<int>(GRID_HEIGHT, 1));
             game_over = true;
             SDL_SetWindowTitle(window, "YOU WIN! - Press 'R' to restart");
-            leaderboard.add_score(Score(time));
+            leaderboard.add_score(Score(time_elapsed));
         }
     } else if (event->type == SDL_EVENT_KEY_DOWN){
         if (event->key.key == SDLK_R && game_over) {
             board.assign(GRID_WIDTH, std::vector<int>(GRID_HEIGHT, 0));
+            time_elapsed.reset();
             sweep->reset();
             game_over = false;
             game_start = false;
@@ -186,11 +193,21 @@ SDL_AppResult SDL_AppIterate(void *appstate){
         SDL_Log("Couldn't render screen: %s", SDL_GetError());
         return SDL_APP_FAILURE;
     }
+    if (!game_over && game_start){
+        std::stringstream title;
+        title << sweep->getMineCount() - flags <<" Mines Remaining - " << time_elapsed;
+        SDL_SetWindowTitle(window, title.str().c_str());
+    }
     return SDL_APP_CONTINUE;
 }
 
 void SDL_AppQuit(void *appstate, SDL_AppResult result) {
-    delete[] tiles;
+    for (int i = 0; i < TILE_COUNT; i++){
+        SDL_DestroyTexture(tiles[i]);
+    }
+    SDL_DestroyTexture(frame);
+    SDL_DestroyWindow(window);
+    SDL_DestroyRenderer(renderer);
     delete sweep;
     return;
 }
@@ -198,8 +215,11 @@ void SDL_AppQuit(void *appstate, SDL_AppResult result) {
 void makeTiles(SDL_Texture** &out, Tilemap map, const int& count) {
     delete[] out;
     out = new SDL_Texture*[count];
+    SDL_Surface* tile;
     for (int i = 0; i < count; i++){
-        out[i] = SDL_CreateTextureFromSurface(renderer, map[i]);
+        tile = map[i];
+        out[i] = SDL_CreateTextureFromSurface(renderer, tile);
+        SDL_DestroySurface(tile);
     }
 }
 
@@ -224,6 +244,6 @@ void reveal(const int& x, const int& y) {
 }
 
 void tick(){
-    time += ticks - SDL_GetTicks();
-    ticks = SDL_GetTicks();
+    if (game_start) time_elapsed += SDL_GetTicks() - total_ticks;
+    total_ticks = SDL_GetTicks();
 }
