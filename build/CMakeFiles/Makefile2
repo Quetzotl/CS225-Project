@@ -128,8 +128,8 @@ vendored/SDL_image/clean: vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/cl
 # Target rules for target CMakeFiles/Minesweeper.dir
 
 # All Build rule for target.
-CMakeFiles/Minesweeper.dir/all: vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/all
 CMakeFiles/Minesweeper.dir/all: vendored/SDL/CMakeFiles/SDL3-shared.dir/all
+CMakeFiles/Minesweeper.dir/all: vendored/SDL_image/CMakeFiles/SDL3_image-shared.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/josh/Downloads/CS225-Project/build/CMakeFiles --progress-num=1 "Built target Minesweeper"

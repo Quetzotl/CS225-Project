@@ -206,8 +206,8 @@ void SDL_AppQuit(void *appstate, SDL_AppResult result) {
         SDL_DestroyTexture(tiles[i]);
     }
     SDL_DestroyTexture(frame);
-    SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
     delete sweep;
     return;
 }
