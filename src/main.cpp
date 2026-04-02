@@ -26,6 +26,7 @@ std::vector<std::vector<int> > board(GRID_WIDTH, std::vector<int>(GRID_HEIGHT, 0
 Minesweeper* sweep;
 bool game_start = false;
 bool game_over = false;
+bool render_update = true;
 int flags = 0;
 int revealed = 0;
 Uint64 total_ticks = 0;
@@ -158,11 +159,20 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event){
             SDL_SetWindowTitle(window, "Minesweeper");
         }
     }
+    render_update = true;
     return SDL_APP_CONTINUE;
 }
 
 SDL_AppResult SDL_AppIterate(void *appstate){
+    if (!(SDL_GetWindowFlags(window) & SDL_WINDOW_INPUT_FOCUS)) return SDL_APP_CONTINUE;
     tick();
+    if (!game_over && game_start){
+        std::stringstream title;
+        title << sweep->getMineCount() - flags <<" Mines Remaining - " << time_elapsed;
+        SDL_SetWindowTitle(window, title.str().c_str());
+    }
+    if (!render_update) return SDL_APP_CONTINUE;
+    render_update = false;
     SDL_RenderClear(renderer);
     if (!SDL_RenderTexture9GridTiled(renderer, frame, NULL, 
         FRAME_SIZE, FRAME_SIZE, FRAME_SIZE, FRAME_SIZE, 0.0f, NULL, 1.0f)){
@@ -192,11 +202,6 @@ SDL_AppResult SDL_AppIterate(void *appstate){
     if (!SDL_RenderPresent(renderer)){
         SDL_Log("Couldn't render screen: %s", SDL_GetError());
         return SDL_APP_FAILURE;
-    }
-    if (!game_over && game_start){
-        std::stringstream title;
-        title << sweep->getMineCount() - flags <<" Mines Remaining - " << time_elapsed;
-        SDL_SetWindowTitle(window, title.str().c_str());
     }
     return SDL_APP_CONTINUE;
 }
